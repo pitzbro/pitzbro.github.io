@@ -1,0 +1,42 @@
+$portrait-breakpoint: 550px;
+$landscape-breakpoint: 740px;
+$narrow-breakpoint: 980px;
+
+/* Breakpoint mixins */
+
+@mixin for-portrait-layout {
+  @media (max-width: $portrait-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-landscape-layout {
+  @media (max-width: $landscape-breakpoint) {
+    @content;
+  }
+}
+
+@mixin for-narrow-layout {
+  @media (max-width: $narrow-breakpoint) {
+    @content;
+  }
+}
+
+/* Size Functions */
+
+@function rem($size) {
+  $remSize: $size / 16px;
+  @return ($remSize) * 1rem;
+}
+
+@function em($pixels, $context: 16px) {
+  @return ($pixels/$context) * 1em;
+}
+
+/* Layout mixins */
+
+@mixin bordered-content {
+  border-right: $main-border;
+  border-left: $main-border;
+  padding: 20px;
+}

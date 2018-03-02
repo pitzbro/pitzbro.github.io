@@ -1,0 +1,19 @@
+/*---------- Layout  ----------*/
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    max-width: $narrow-breakpoint;
+    margin: 0 auto;
+
+    @include for-narrow-layout {
+        max-width: $landscape-breakpoint;
+    }
+    
+    @include for-landscape-layout {
+        max-width: 100%;
+    }
+
+}

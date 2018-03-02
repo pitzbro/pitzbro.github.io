@@ -1,0 +1,13 @@
+@import 'vars';
+@import 'fonts';
+@import 'mixins';
+@import 'helpers';
+@import 'layout';
+@import 'base';
+
+// /* Components */
+@import 'main-header';
+@import 'main-content';
+@import 'image-gallery';
+@import 'main-pager';
+@import 'main-footer';
